@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "@openzeppelin/contracts": "^4.7.2",
-    "truffle": "^5.5.25"
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "ganache": "^7.4.0",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.5.25",
+    "web3": "^1.7.5"
   }
 }

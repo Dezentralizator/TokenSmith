@@ -48,15 +48,5 @@ contract ContestGovernor is GovernorContest, GovernorVotes, GovernorVotesQuorumF
         returns (uint256)
     {
         return super.quorum(blockNumber);
-    }
-
-
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(GovernorContest)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
-    }
+    } 
 }

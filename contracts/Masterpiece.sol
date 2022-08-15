@@ -14,8 +14,8 @@ contract Masterpiece {
     
     
    
-    constructor(string memory _name, string memory symbol, address _creatorAddress, uint256 _maxSupply, uint256 _mintingPrice, string memory baseURI) {
-        token =  new ERC721Version(_name,symbol,_creatorAddress, _maxSupply, _mintingPrice, baseURI);
+    constructor(string memory _name, string memory _symbol) {
+        token =  new ERC721Version(_name,_symbol);
         governor = new ContestGovernor(token);
         treasuryAddress = address(governor.treasury());
         token.setTreasuryAddress(treasuryAddress);

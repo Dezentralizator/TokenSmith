@@ -13,25 +13,12 @@
 pragma solidity ^0.8.0;
 interface IERC721Version{
 
-    /**
-    @dev Access to the various procedurally generated core files and their upgraded version  
-    */
-    function tokenURI(uint256 tokenId, uint256 version) external view returns (string memory);
-
-    /** 
-    @dev Access to the complete list of files for project development
-    */
-    function allFileURI() external view returns (string[] memory);
 
     /**
     @dev Retrieve a specific file.
      */
     function fileURI(uint256 fileIndex) external view returns (string memory);
 
-    /**
-    @dev Add the coreURI of the new core generative base.
-     */
-    function addNewVersion(string calldata _newBaseURI) external;
 
     /** 
     @dev Add the URI of any form of file to the development of the project
@@ -44,7 +31,5 @@ interface IERC721Version{
      */
 
     event NewFile(address deliveryAddress, string newFile, uint256 fileID);
-
-    event NewVersion(address deliveryAddress, string newVersion, uint256 versionID);
 
 }

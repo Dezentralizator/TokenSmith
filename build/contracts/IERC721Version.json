@@ -27,68 +27,6 @@
       "type": "event"
     },
     {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "deliveryAddress",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "newVersion",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "versionID",
-          "type": "uint256"
-        }
-      ],
-      "name": "NewVersion",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "version",
-          "type": "uint256"
-        }
-      ],
-      "name": "tokenURI",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "allFileURI",
-      "outputs": [
-        {
-          "internalType": "string[]",
-          "name": "",
-          "type": "string[]"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
       "inputs": [
         {
           "internalType": "uint256",
@@ -111,19 +49,6 @@
       "inputs": [
         {
           "internalType": "string",
-          "name": "_newBaseURI",
-          "type": "string"
-        }
-      ],
-      "name": "addNewVersion",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
           "name": "_FileURI",
           "type": "string"
         }
@@ -134,7 +59,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"deliveryAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"newFile\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fileID\",\"type\":\"uint256\"}],\"name\":\"NewFile\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"deliveryAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"newVersion\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"versionID\",\"type\":\"uint256\"}],\"name\":\"NewVersion\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_FileURI\",\"type\":\"string\"}],\"name\":\"addNewFile\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_newBaseURI\",\"type\":\"string\"}],\"name\":\"addNewVersion\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"allFileURI\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fileIndex\",\"type\":\"uint256\"}],\"name\":\"fileURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"version\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"NewFile(address,string,uint256)\":{\"details\":\"Event emitted when a new file is added to the core\"}},\"kind\":\"dev\",\"methods\":{\"addNewFile(string)\":{\"details\":\"Add the URI of any form of file to the development of the project\"},\"addNewVersion(string)\":{\"details\":\"Add the coreURI of the new core generative base.\"},\"allFileURI()\":{\"details\":\"Access to the complete list of files for project development\"},\"fileURI(uint256)\":{\"details\":\"Retrieve a specific file.\"},\"tokenURI(uint256,uint256)\":{\"details\":\"Access to the various procedurally generated core files and their upgraded version  \"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IERC721Version.sol\":\"IERC721Version\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IERC721Version.sol\":{\"keccak256\":\"0x7bcf00f067a20bc2bbba7090f6a711c1f3715b63d54df8b1b62969beb8f103aa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://953e121cc6def5476122b98ca8fbada940aa02bacd59c40b4006d4b5d2488359\",\"dweb:/ipfs/QmPnYsY48Rg4FXu14ndyoYAn86cicAKYgcBCDqvswx7YuG\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"deliveryAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"newFile\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fileID\",\"type\":\"uint256\"}],\"name\":\"NewFile\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_FileURI\",\"type\":\"string\"}],\"name\":\"addNewFile\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fileIndex\",\"type\":\"uint256\"}],\"name\":\"fileURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"NewFile(address,string,uint256)\":{\"details\":\"Event emitted when a new file is added to the core\"}},\"kind\":\"dev\",\"methods\":{\"addNewFile(string)\":{\"details\":\"Add the URI of any form of file to the development of the project\"},\"fileURI(uint256)\":{\"details\":\"Retrieve a specific file.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IERC721Version.sol\":\"IERC721Version\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IERC721Version.sol\":{\"keccak256\":\"0x1c7242bc08bd659ff5ee17b7ff779d7450fa0c56e601962844f97564ce381d98\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c7ad4826f6a6fe62678a1e0977b096e286aef5fd5bafdd0057c217f708c2071b\",\"dweb:/ipfs/QmWyZU44X9bhh2pjhEv7xAkYXez37m55tuBbZRA2b38Bgt\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -142,21 +67,21 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\n// An add-on to NFTs to make them able to grow in Metadata over time.\n\n/**\n@author Lorenz Schmidlin\n@notice Extension based on openZeppelin's implementation of the ERC721 Token standard to generate improvable metadata.\n@dev The main bonus is to create ways to fetch metadata of an NFT so that it can be upgraded as the community implements better source file.\n- BaseURI is upgradeable and can generate improvements of the NFT.\n- FileURI represents various type of files for the system not used for procedural generation.\n\n\n */\npragma solidity ^0.8.0;\ninterface IERC721Version{\n\n    /**\n    @dev Access to the various procedurally generated core files and their upgraded version  \n    */\n    function tokenURI(uint256 tokenId, uint256 version) external view returns (string memory);\n\n    /** \n    @dev Access to the complete list of files for project development\n    */\n    function allFileURI() external view returns (string[] memory);\n\n    /**\n    @dev Retrieve a specific file.\n     */\n    function fileURI(uint256 fileIndex) external view returns (string memory);\n\n    /**\n    @dev Add the coreURI of the new core generative base.\n     */\n    function addNewVersion(string calldata _newBaseURI) external;\n\n    /** \n    @dev Add the URI of any form of file to the development of the project\n    */\n    function addNewFile(string calldata _FileURI) external;\n\n    \n    /**\n    @dev Event emitted when a new file is added to the core\n     */\n\n    event NewFile(address deliveryAddress, string newFile, uint256 fileID);\n\n    event NewVersion(address deliveryAddress, string newVersion, uint256 versionID);\n\n}",
-  "sourcePath": "/Users/admin/Desktop/TokenSmith/contracts/interfaces/IERC721Version.sol",
+  "source": "// SPDX-License-Identifier: MIT\n// An add-on to NFTs to make them able to grow in Metadata over time.\n\n/**\n@author Lorenz Schmidlin\n@notice Extension based on openZeppelin's implementation of the ERC721 Token standard to generate improvable metadata.\n@dev The main bonus is to create ways to fetch metadata of an NFT so that it can be upgraded as the community implements better source file.\n- BaseURI is upgradeable and can generate improvements of the NFT.\n- FileURI represents various type of files for the system not used for procedural generation.\n\n\n */\npragma solidity ^0.8.0;\ninterface IERC721Version{\n\n\n    /**\n    @dev Retrieve a specific file.\n     */\n    function fileURI(uint256 fileIndex) external view returns (string memory);\n\n\n    /** \n    @dev Add the URI of any form of file to the development of the project\n    */\n    function addNewFile(string calldata _FileURI) external;\n\n    \n    /**\n    @dev Event emitted when a new file is added to the core\n     */\n\n    event NewFile(address deliveryAddress, string newFile, uint256 fileID);\n\n}",
+  "sourcePath": "/Users/admin/Desktop/GeneralCoding/TokenSmith/contracts/interfaces/IERC721Version.sol",
   "ast": {
     "absolutePath": "project:/contracts/interfaces/IERC721Version.sol",
     "exportedSymbols": {
       "IERC721Version": [
-        10607
+        10215
       ]
     },
-    "id": 10608,
+    "id": 10216,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10552,
+        "id": 10191,
         "literals": [
           "solidity",
           "^",
@@ -164,7 +89,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "559:23:39"
+        "src": "559:23:37"
       },
       {
         "abstract": false,
@@ -173,228 +98,42 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 10607,
+        "id": 10215,
         "linearizedBaseContracts": [
-          10607
+          10215
         ],
         "name": "IERC721Version",
-        "nameLocation": "593:14:39",
+        "nameLocation": "593:14:37",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 10553,
+              "id": 10192,
               "nodeType": "StructuredDocumentation",
-              "src": "614:104:39",
-              "text": "@dev Access to the various procedurally generated core files and their upgraded version  "
-            },
-            "functionSelector": "92cb829d",
-            "id": 10562,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "tokenURI",
-            "nameLocation": "732:8:39",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 10558,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10555,
-                  "mutability": "mutable",
-                  "name": "tokenId",
-                  "nameLocation": "749:7:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10562,
-                  "src": "741:15:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 10554,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "741:7:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 10557,
-                  "mutability": "mutable",
-                  "name": "version",
-                  "nameLocation": "766:7:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10562,
-                  "src": "758:15:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 10556,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "758:7:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "740:34:39"
-            },
-            "returnParameters": {
-              "id": 10561,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10560,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10562,
-                  "src": "798:13:39",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 10559,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "798:6:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "797:15:39"
-            },
-            "scope": 10607,
-            "src": "723:90:39",
-            "stateMutability": "view",
-            "virtual": false,
-            "visibility": "external"
-          },
-          {
-            "documentation": {
-              "id": 10563,
-              "nodeType": "StructuredDocumentation",
-              "src": "819:81:39",
-              "text": "@dev Access to the complete list of files for project development"
-            },
-            "functionSelector": "3a5874e2",
-            "id": 10569,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "allFileURI",
-            "nameLocation": "914:10:39",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 10564,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "924:2:39"
-            },
-            "returnParameters": {
-              "id": 10568,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10567,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10569,
-                  "src": "950:15:39",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_string_memory_ptr_$dyn_memory_ptr",
-                    "typeString": "string[]"
-                  },
-                  "typeName": {
-                    "baseType": {
-                      "id": 10565,
-                      "name": "string",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "950:6:39",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_string_storage_ptr",
-                        "typeString": "string"
-                      }
-                    },
-                    "id": 10566,
-                    "nodeType": "ArrayTypeName",
-                    "src": "950:8:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
-                      "typeString": "string[]"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "949:17:39"
-            },
-            "scope": 10607,
-            "src": "905:62:39",
-            "stateMutability": "view",
-            "virtual": false,
-            "visibility": "external"
-          },
-          {
-            "documentation": {
-              "id": 10570,
-              "nodeType": "StructuredDocumentation",
-              "src": "973:46:39",
+              "src": "615:46:37",
               "text": "@dev Retrieve a specific file."
             },
             "functionSelector": "b5651b5a",
-            "id": 10577,
+            "id": 10199,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "fileURI",
-            "nameLocation": "1033:7:39",
+            "nameLocation": "675:7:37",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10573,
+              "id": 10195,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10572,
+                  "id": 10194,
                   "mutability": "mutable",
                   "name": "fileIndex",
-                  "nameLocation": "1049:9:39",
+                  "nameLocation": "691:9:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10577,
-                  "src": "1041:17:39",
+                  "scope": 10199,
+                  "src": "683:17:37",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -402,10 +141,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 10571,
+                    "id": 10193,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1041:7:39",
+                    "src": "683:7:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -414,21 +153,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1040:19:39"
+              "src": "682:19:37"
             },
             "returnParameters": {
-              "id": 10576,
+              "id": 10198,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10575,
+                  "id": 10197,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10577,
-                  "src": "1083:13:39",
+                  "scope": 10199,
+                  "src": "725:13:37",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -436,10 +175,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 10574,
+                    "id": 10196,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1083:6:39",
+                    "src": "725:6:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -448,103 +187,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1082:15:39"
+              "src": "724:15:37"
             },
-            "scope": 10607,
-            "src": "1024:74:39",
+            "scope": 10215,
+            "src": "666:74:37",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 10578,
+              "id": 10200,
               "nodeType": "StructuredDocumentation",
-              "src": "1104:69:39",
-              "text": "@dev Add the coreURI of the new core generative base."
-            },
-            "functionSelector": "c79c897b",
-            "id": 10583,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "addNewVersion",
-            "nameLocation": "1187:13:39",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 10581,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10580,
-                  "mutability": "mutable",
-                  "name": "_newBaseURI",
-                  "nameLocation": "1217:11:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10583,
-                  "src": "1201:27:39",
-                  "stateVariable": false,
-                  "storageLocation": "calldata",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_calldata_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 10579,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1201:6:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "1200:29:39"
-            },
-            "returnParameters": {
-              "id": 10582,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1238:0:39"
-            },
-            "scope": 10607,
-            "src": "1178:61:39",
-            "stateMutability": "nonpayable",
-            "virtual": false,
-            "visibility": "external"
-          },
-          {
-            "documentation": {
-              "id": 10584,
-              "nodeType": "StructuredDocumentation",
-              "src": "1245:86:39",
+              "src": "747:86:37",
               "text": "@dev Add the URI of any form of file to the development of the project"
             },
             "functionSelector": "f7c6aac5",
-            "id": 10589,
+            "id": 10205,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addNewFile",
-            "nameLocation": "1345:10:39",
+            "nameLocation": "847:10:37",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10587,
+              "id": 10203,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10586,
+                  "id": 10202,
                   "mutability": "mutable",
                   "name": "_FileURI",
-                  "nameLocation": "1372:8:39",
+                  "nameLocation": "874:8:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10589,
-                  "src": "1356:24:39",
+                  "scope": 10205,
+                  "src": "858:24:37",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -552,10 +230,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 10585,
+                    "id": 10201,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1356:6:39",
+                    "src": "858:6:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -564,16 +242,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1355:26:39"
+              "src": "857:26:37"
             },
             "returnParameters": {
-              "id": 10588,
+              "id": 10204,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1390:0:39"
+              "src": "892:0:37"
             },
-            "scope": 10607,
-            "src": "1336:55:39",
+            "scope": 10215,
+            "src": "838:55:37",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -581,29 +259,29 @@
           {
             "anonymous": false,
             "documentation": {
-              "id": 10590,
+              "id": 10206,
               "nodeType": "StructuredDocumentation",
-              "src": "1402:71:39",
+              "src": "904:71:37",
               "text": "@dev Event emitted when a new file is added to the core"
             },
-            "id": 10598,
+            "id": 10214,
             "name": "NewFile",
-            "nameLocation": "1485:7:39",
+            "nameLocation": "987:7:37",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 10597,
+              "id": 10213,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10592,
+                  "id": 10208,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "deliveryAddress",
-                  "nameLocation": "1501:15:39",
+                  "nameLocation": "1003:15:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10598,
-                  "src": "1493:23:39",
+                  "scope": 10214,
+                  "src": "995:23:37",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -611,10 +289,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10591,
+                    "id": 10207,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1493:7:39",
+                    "src": "995:7:37",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -625,14 +303,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 10594,
+                  "id": 10210,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newFile",
-                  "nameLocation": "1525:7:39",
+                  "nameLocation": "1027:7:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10598,
-                  "src": "1518:14:39",
+                  "scope": 10214,
+                  "src": "1020:14:37",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -640,10 +318,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 10593,
+                    "id": 10209,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1518:6:39",
+                    "src": "1020:6:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -653,14 +331,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 10596,
+                  "id": 10212,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "fileID",
-                  "nameLocation": "1542:6:39",
+                  "nameLocation": "1044:6:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10598,
-                  "src": "1534:14:39",
+                  "scope": 10214,
+                  "src": "1036:14:37",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -668,10 +346,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 10595,
+                    "id": 10211,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1534:7:39",
+                    "src": "1036:7:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -680,131 +358,31 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1492:57:39"
+              "src": "994:57:37"
             },
-            "src": "1479:71:39"
-          },
-          {
-            "anonymous": false,
-            "id": 10606,
-            "name": "NewVersion",
-            "nameLocation": "1562:10:39",
-            "nodeType": "EventDefinition",
-            "parameters": {
-              "id": 10605,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10600,
-                  "indexed": false,
-                  "mutability": "mutable",
-                  "name": "deliveryAddress",
-                  "nameLocation": "1581:15:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10606,
-                  "src": "1573:23:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 10599,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1573:7:39",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 10602,
-                  "indexed": false,
-                  "mutability": "mutable",
-                  "name": "newVersion",
-                  "nameLocation": "1605:10:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10606,
-                  "src": "1598:17:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 10601,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1598:6:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 10604,
-                  "indexed": false,
-                  "mutability": "mutable",
-                  "name": "versionID",
-                  "nameLocation": "1625:9:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10606,
-                  "src": "1617:17:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 10603,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1617:7:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "1572:63:39"
-            },
-            "src": "1556:80:39"
+            "src": "981:71:37"
           }
         ],
-        "scope": 10608,
-        "src": "583:1056:39",
+        "scope": 10216,
+        "src": "583:472:37",
         "usedErrors": []
       }
     ],
-    "src": "559:1080:39"
+    "src": "559:496:37"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/interfaces/IERC721Version.sol",
     "exportedSymbols": {
       "IERC721Version": [
-        10607
+        10215
       ]
     },
-    "id": 10608,
+    "id": 10216,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10552,
+        "id": 10191,
         "literals": [
           "solidity",
           "^",
@@ -812,7 +390,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "559:23:39"
+        "src": "559:23:37"
       },
       {
         "abstract": false,
@@ -821,228 +399,42 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 10607,
+        "id": 10215,
         "linearizedBaseContracts": [
-          10607
+          10215
         ],
         "name": "IERC721Version",
-        "nameLocation": "593:14:39",
+        "nameLocation": "593:14:37",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 10553,
+              "id": 10192,
               "nodeType": "StructuredDocumentation",
-              "src": "614:104:39",
-              "text": "@dev Access to the various procedurally generated core files and their upgraded version  "
-            },
-            "functionSelector": "92cb829d",
-            "id": 10562,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "tokenURI",
-            "nameLocation": "732:8:39",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 10558,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10555,
-                  "mutability": "mutable",
-                  "name": "tokenId",
-                  "nameLocation": "749:7:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10562,
-                  "src": "741:15:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 10554,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "741:7:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 10557,
-                  "mutability": "mutable",
-                  "name": "version",
-                  "nameLocation": "766:7:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10562,
-                  "src": "758:15:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 10556,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "758:7:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "740:34:39"
-            },
-            "returnParameters": {
-              "id": 10561,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10560,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10562,
-                  "src": "798:13:39",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 10559,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "798:6:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "797:15:39"
-            },
-            "scope": 10607,
-            "src": "723:90:39",
-            "stateMutability": "view",
-            "virtual": false,
-            "visibility": "external"
-          },
-          {
-            "documentation": {
-              "id": 10563,
-              "nodeType": "StructuredDocumentation",
-              "src": "819:81:39",
-              "text": "@dev Access to the complete list of files for project development"
-            },
-            "functionSelector": "3a5874e2",
-            "id": 10569,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "allFileURI",
-            "nameLocation": "914:10:39",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 10564,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "924:2:39"
-            },
-            "returnParameters": {
-              "id": 10568,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10567,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10569,
-                  "src": "950:15:39",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_string_memory_ptr_$dyn_memory_ptr",
-                    "typeString": "string[]"
-                  },
-                  "typeName": {
-                    "baseType": {
-                      "id": 10565,
-                      "name": "string",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "950:6:39",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_string_storage_ptr",
-                        "typeString": "string"
-                      }
-                    },
-                    "id": 10566,
-                    "nodeType": "ArrayTypeName",
-                    "src": "950:8:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
-                      "typeString": "string[]"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "949:17:39"
-            },
-            "scope": 10607,
-            "src": "905:62:39",
-            "stateMutability": "view",
-            "virtual": false,
-            "visibility": "external"
-          },
-          {
-            "documentation": {
-              "id": 10570,
-              "nodeType": "StructuredDocumentation",
-              "src": "973:46:39",
+              "src": "615:46:37",
               "text": "@dev Retrieve a specific file."
             },
             "functionSelector": "b5651b5a",
-            "id": 10577,
+            "id": 10199,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "fileURI",
-            "nameLocation": "1033:7:39",
+            "nameLocation": "675:7:37",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10573,
+              "id": 10195,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10572,
+                  "id": 10194,
                   "mutability": "mutable",
                   "name": "fileIndex",
-                  "nameLocation": "1049:9:39",
+                  "nameLocation": "691:9:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10577,
-                  "src": "1041:17:39",
+                  "scope": 10199,
+                  "src": "683:17:37",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1050,10 +442,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 10571,
+                    "id": 10193,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1041:7:39",
+                    "src": "683:7:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1062,21 +454,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1040:19:39"
+              "src": "682:19:37"
             },
             "returnParameters": {
-              "id": 10576,
+              "id": 10198,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10575,
+                  "id": 10197,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10577,
-                  "src": "1083:13:39",
+                  "scope": 10199,
+                  "src": "725:13:37",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1084,10 +476,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 10574,
+                    "id": 10196,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1083:6:39",
+                    "src": "725:6:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1096,103 +488,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1082:15:39"
+              "src": "724:15:37"
             },
-            "scope": 10607,
-            "src": "1024:74:39",
+            "scope": 10215,
+            "src": "666:74:37",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 10578,
+              "id": 10200,
               "nodeType": "StructuredDocumentation",
-              "src": "1104:69:39",
-              "text": "@dev Add the coreURI of the new core generative base."
-            },
-            "functionSelector": "c79c897b",
-            "id": 10583,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "addNewVersion",
-            "nameLocation": "1187:13:39",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 10581,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10580,
-                  "mutability": "mutable",
-                  "name": "_newBaseURI",
-                  "nameLocation": "1217:11:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10583,
-                  "src": "1201:27:39",
-                  "stateVariable": false,
-                  "storageLocation": "calldata",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_calldata_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 10579,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1201:6:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "1200:29:39"
-            },
-            "returnParameters": {
-              "id": 10582,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1238:0:39"
-            },
-            "scope": 10607,
-            "src": "1178:61:39",
-            "stateMutability": "nonpayable",
-            "virtual": false,
-            "visibility": "external"
-          },
-          {
-            "documentation": {
-              "id": 10584,
-              "nodeType": "StructuredDocumentation",
-              "src": "1245:86:39",
+              "src": "747:86:37",
               "text": "@dev Add the URI of any form of file to the development of the project"
             },
             "functionSelector": "f7c6aac5",
-            "id": 10589,
+            "id": 10205,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addNewFile",
-            "nameLocation": "1345:10:39",
+            "nameLocation": "847:10:37",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10587,
+              "id": 10203,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10586,
+                  "id": 10202,
                   "mutability": "mutable",
                   "name": "_FileURI",
-                  "nameLocation": "1372:8:39",
+                  "nameLocation": "874:8:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10589,
-                  "src": "1356:24:39",
+                  "scope": 10205,
+                  "src": "858:24:37",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -1200,10 +531,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 10585,
+                    "id": 10201,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1356:6:39",
+                    "src": "858:6:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1212,16 +543,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1355:26:39"
+              "src": "857:26:37"
             },
             "returnParameters": {
-              "id": 10588,
+              "id": 10204,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1390:0:39"
+              "src": "892:0:37"
             },
-            "scope": 10607,
-            "src": "1336:55:39",
+            "scope": 10215,
+            "src": "838:55:37",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1229,29 +560,29 @@
           {
             "anonymous": false,
             "documentation": {
-              "id": 10590,
+              "id": 10206,
               "nodeType": "StructuredDocumentation",
-              "src": "1402:71:39",
+              "src": "904:71:37",
               "text": "@dev Event emitted when a new file is added to the core"
             },
-            "id": 10598,
+            "id": 10214,
             "name": "NewFile",
-            "nameLocation": "1485:7:39",
+            "nameLocation": "987:7:37",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 10597,
+              "id": 10213,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10592,
+                  "id": 10208,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "deliveryAddress",
-                  "nameLocation": "1501:15:39",
+                  "nameLocation": "1003:15:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10598,
-                  "src": "1493:23:39",
+                  "scope": 10214,
+                  "src": "995:23:37",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1259,10 +590,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10591,
+                    "id": 10207,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1493:7:39",
+                    "src": "995:7:37",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1273,14 +604,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 10594,
+                  "id": 10210,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newFile",
-                  "nameLocation": "1525:7:39",
+                  "nameLocation": "1027:7:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10598,
-                  "src": "1518:14:39",
+                  "scope": 10214,
+                  "src": "1020:14:37",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1288,10 +619,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 10593,
+                    "id": 10209,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1518:6:39",
+                    "src": "1020:6:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1301,14 +632,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 10596,
+                  "id": 10212,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "fileID",
-                  "nameLocation": "1542:6:39",
+                  "nameLocation": "1044:6:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10598,
-                  "src": "1534:14:39",
+                  "scope": 10214,
+                  "src": "1036:14:37",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1316,10 +647,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 10595,
+                    "id": 10211,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1534:7:39",
+                    "src": "1036:7:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1328,117 +659,17 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1492:57:39"
+              "src": "994:57:37"
             },
-            "src": "1479:71:39"
-          },
-          {
-            "anonymous": false,
-            "id": 10606,
-            "name": "NewVersion",
-            "nameLocation": "1562:10:39",
-            "nodeType": "EventDefinition",
-            "parameters": {
-              "id": 10605,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 10600,
-                  "indexed": false,
-                  "mutability": "mutable",
-                  "name": "deliveryAddress",
-                  "nameLocation": "1581:15:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10606,
-                  "src": "1573:23:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 10599,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1573:7:39",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 10602,
-                  "indexed": false,
-                  "mutability": "mutable",
-                  "name": "newVersion",
-                  "nameLocation": "1605:10:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10606,
-                  "src": "1598:17:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 10601,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1598:6:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 10604,
-                  "indexed": false,
-                  "mutability": "mutable",
-                  "name": "versionID",
-                  "nameLocation": "1625:9:39",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 10606,
-                  "src": "1617:17:39",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 10603,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1617:7:39",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "1572:63:39"
-            },
-            "src": "1556:80:39"
+            "src": "981:71:37"
           }
         ],
-        "scope": 10608,
-        "src": "583:1056:39",
+        "scope": 10216,
+        "src": "583:472:37",
         "usedErrors": []
       }
     ],
-    "src": "559:1080:39"
+    "src": "559:496:37"
   },
   "compiler": {
     "name": "solc",
@@ -1446,7 +677,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.5",
-  "updatedAt": "2022-08-07T14:35:04.119Z",
+  "updatedAt": "2022-08-15T08:08:32.800Z",
   "devdoc": {
     "events": {
       "NewFile(address,string,uint256)": {
@@ -1458,17 +689,8 @@
       "addNewFile(string)": {
         "details": "Add the URI of any form of file to the development of the project"
       },
-      "addNewVersion(string)": {
-        "details": "Add the coreURI of the new core generative base."
-      },
-      "allFileURI()": {
-        "details": "Access to the complete list of files for project development"
-      },
       "fileURI(uint256)": {
         "details": "Retrieve a specific file."
-      },
-      "tokenURI(uint256,uint256)": {
-        "details": "Access to the various procedurally generated core files and their upgraded version  "
       }
     },
     "version": 1

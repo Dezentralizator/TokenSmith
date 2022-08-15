@@ -1,0 +1,119 @@
+{
+  "contractName": "ERC165NotSupported",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Mocks/ERC165/ERC165NotSupported.sol\":\"ERC165NotSupported\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Mocks/ERC165/ERC165NotSupported.sol\":{\"keccak256\":\"0x10590faccb835675869e65f55b97085319c0412d872c6abc2903f65b86c6d950\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6f523caffac4feeb45dcdf054a1fb56f0d557b53b640a95caf3d7987438a55a\",\"dweb:/ipfs/QmePz11sAJewMK1She9NTvZo6vydj4bb5x6iTRwjPhdKpo\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220bfdd0e89c08eb8cc54435918520e00241315558f94794a174df96d4988ae538664736f6c634300080b0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220bfdd0e89c08eb8cc54435918520e00241315558f94794a174df96d4988ae538664736f6c634300080b0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "58:30:42:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "58:30:42:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\ncontract ERC165NotSupported {}\n",
+  "sourcePath": "/Users/admin/Desktop/GeneralCoding/TokenSmith/contracts/Mocks/ERC165/ERC165NotSupported.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Mocks/ERC165/ERC165NotSupported.sol",
+    "exportedSymbols": {
+      "ERC165NotSupported": [
+        10492
+      ]
+    },
+    "id": 10493,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10491,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:42"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ERC165NotSupported",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 10492,
+        "linearizedBaseContracts": [
+          10492
+        ],
+        "name": "ERC165NotSupported",
+        "nameLocation": "67:18:42",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 10493,
+        "src": "58:30:42",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:56:42"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/Mocks/ERC165/ERC165NotSupported.sol",
+    "exportedSymbols": {
+      "ERC165NotSupported": [
+        10492
+      ]
+    },
+    "id": 10493,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10491,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:42"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ERC165NotSupported",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 10492,
+        "linearizedBaseContracts": [
+          10492
+        ],
+        "name": "ERC165NotSupported",
+        "nameLocation": "67:18:42",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 10493,
+        "src": "58:30:42",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:56:42"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-08-15T10:35:57.442Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

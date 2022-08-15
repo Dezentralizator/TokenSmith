@@ -34,7 +34,7 @@ abstract contract GovernorContest is Context, ERC165, EIP712, IGovernorContest {
     using Sorter for address[];
     using Timers for Timers.BlockNumber;
 
-    bytes32 public constant CONTEST_TYPEHASH = keccak256("Contest(uint256 proposalId,uint256 value)");
+    bytes32 public constant CONTEST_TYPEHASH = keccak256("Contest(uint256 ContestId,uint256 value)");
 
     struct ContestCore {
         Timers.BlockNumber regStart;
@@ -103,7 +103,7 @@ abstract contract GovernorContest is Context, ERC165, EIP712, IGovernorContest {
         // In addition to the current interfaceId, also support previous version of the interfaceId that did not
         // include the castVoteWithReasonAndParams() function as standard
         return
-            super.supportsInterface(interfaceId);
+            interfaceId == type(IGovernorContest).interfaceId || super.supportsInterface(interfaceId);
     }
 
     /**

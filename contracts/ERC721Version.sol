@@ -5,8 +5,7 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Royalty.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/draft-ERC721Votes.sol";
+import "@openzeppelin/contracts/governance/utils/Votes.sol";
 import "@openzeppelin/contracts/governance/Governor.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -22,30 +21,28 @@ ERC721Enumerable is used to organize voting system
 
  */
 
-contract ERC721Version is ERC721Enumerable, ERC721Royalty, ERC721URIStorage, ERC721Votes, IERC721Version, Ownable {
+contract ERC721Version is ERC721Enumerable, ERC721Royalty, Votes, Ownable, IERC721Version {
 
     using Strings for uint256;
 
-    uint256 public immutable maxSupply;
-    uint256 public immutable mintingPrice;
-    string[] public versionBaseURI;
-    mapping(uint256 => uint256) public preferredVersionForOwner;
-    string[] public usefulFiles;
-    address creatorAddress;
-    address treasuryAddress;
+    uint128 public  maxSupply = 10000;
+    uint128 public  mintingPrice = 0;
+    string[] public coreFiles = [""];
+    address public creatorAddress;
+    address public treasuryAddress;
     
 
-    constructor(string memory name, string memory symbol, address _creatorAddress, uint256 _maxSupply, uint256 _mintingPrice, string memory _baseURI)ERC721(name,symbol) EIP712(name, "1" ){
+    constructor(string memory name, string memory symbol)ERC721(name,symbol) EIP712(name, "1" ){
 
-    maxSupply = _maxSupply;
-    mintingPrice = _mintingPrice;
-    creatorAddress = _creatorAddress;
+    creatorAddress = msg.sender;
+
+
 
     }
 
-    function mint() external payable {
+    function mint(address _address, uint256 tokenId) external payable {
         require(msg.value == mintingPrice);
-        _mint(msg.sender, this.totalSupply());
+        _mint(_address, tokenId);
         payable(creatorAddress).transfer(msg.value*80/100);
         payable(treasuryAddress).transfer(msg.value*20/100);
 
@@ -57,50 +54,23 @@ contract ERC721Version is ERC721Enumerable, ERC721Royalty, ERC721URIStorage, ERC
 
 
     // Declares all previous interface, if a new one is created it should be added here
-    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721Enumerable, ERC721Royalty, ERC721) returns (bool) {
-        return ERC721Enumerable.supportsInterface(interfaceId) || 
-        ERC721Royalty.supportsInterface(interfaceId) || ERC721Version.supportsInterface(interfaceId) ||
-        ERC721.supportsInterface(interfaceId);
-    }
-
-    function tokenURI(uint256 tokenId) public view virtual override(ERC721, ERC721URIStorage) returns (string memory) {
-        _requireMinted(tokenId);
-
-        string memory baseURI = _baseURIfromVersion(preferredVersionForOwner[tokenId]);
-        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString())) : "";
-    }
-
-    function tokenURI(uint256 tokenId, uint256 version) public view virtual returns (string memory) {
-        _requireMinted(tokenId);
-
-        string memory baseURI = _baseURIfromVersion(version);
-        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString())) : "";
-    }
-
-    function setPreferredVersion(uint256 tokenId, uint256 version) public {
-        require(msg.sender == ownerOf(tokenId), "You are not allowed to select set preferred version for this token");
-        preferredVersionForOwner[tokenId] = version;
-
-    }
-
-    function allFileURI() public view returns (string[] memory) {
-        return usefulFiles;
+    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721Enumerable, ERC721Royalty) returns (bool) {
+        return interfaceId == type(IERC721Version).interfaceId || 
+        super.supportsInterface(interfaceId);
     }
 
     function fileURI(uint256 fileId) public view returns (string memory) {
-        return usefulFiles[fileId];
+        return coreFiles[fileId];
     }
 
-    function addNewVersion(string calldata _newBaseURI) public virtual{
-        
-        versionBaseURI.push(_newBaseURI);
-        emit NewVersion(msg.sender,_newBaseURI, versionBaseURI.length-1);     
+    function _baseURI() internal view virtual override(ERC721) returns (string memory) {
+        return coreFiles[0];
     }
 
     function addNewFile(string calldata _fileURI) public virtual{
 
-        usefulFiles.push(_fileURI);
-        emit NewFile(msg.sender, _fileURI, usefulFiles.length-1);
+        coreFiles.push(_fileURI);
+        emit NewFile(msg.sender, _fileURI, coreFiles.length-1);
     }
 
 
@@ -113,38 +83,20 @@ contract ERC721Version is ERC721Enumerable, ERC721Royalty, ERC721URIStorage, ERC
         super._beforeTokenTransfer(from,to,tokenId);
     }
 
-
-    // Selects the _burn function from Royalty and URIStorage extension, super.burn (ERC721) is called twice though..
-    // Super.burn risks only invoking one of the inherited functions.
-    // Super.burn(tokenId) should be sufficient alone due to the recursive calls within Royalty and URIStorage 
-    // To check in test file.
-    function _burn(uint256 tokenId) internal virtual override (ERC721,ERC721Royalty, ERC721URIStorage) {
-        ERC721Royalty._burn(tokenId);
-        ERC721URIStorage._burn(tokenId);
-    }
-
-
-    function _afterTokenTransfer(
-        address from,
-        address to,
-        uint256 tokenId
-        ) internal virtual override (ERC721, ERC721Votes){
-        super._afterTokenTransfer(from,to,tokenId);
-    }
-
-
     function _mint(address to, uint256 tokenId) internal virtual override {
+        require(to != address(0), "ERC721: mint to the zero address");
         require(tokenId < maxSupply, "Max supply has already been achieved");
         super._mint(to, tokenId);
     }
 
-    function _baseURIfromVersion(uint256 version) internal view returns ( string memory) {
-        require(version < versionBaseURI.length, "No versions at this index yet");
-        return versionBaseURI[version];
-    }
+  
 
     function setDefaultRoyalty(address receiver, uint96 feeNumerator) public onlyOwner {
         _setDefaultRoyalty(receiver, feeNumerator);
+    }
+
+    function _getVotingUnits(address account) internal view virtual override returns (uint256) {
+        return balanceOf(account);
     }
 
  }
